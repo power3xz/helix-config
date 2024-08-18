@@ -8,6 +8,7 @@ cursorline = true
 auto-format = true
 rulers = [120]
 true-color = true
+bufferline = "always"
 
 [editor.cursor-shape]
 normal = "block"

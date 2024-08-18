@@ -6,14 +6,16 @@ mouse = false
 auto-pairs = false
 cursorline = true
 auto-format = true
+rulers = [120]
+true-color = true
 
 [editor.cursor-shape]
 normal = "block"
 insert = "bar"
+select = "underline"
 
 [editor.statusline]
-left = ["mode", "file-modification-indicator", "read-only-indicator", "spinner"]
-center = ["file-name"]
+left = ["mode", "spinner", "read-only-indicator", "version-control", "file-name", "file-modification-indicator"]
 right = ["diagnostics", "selections", "position", "total-line-numbers", "file-encoding", "file-line-ending", "file-type"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -27,8 +29,24 @@ render = "all"
 
 [editor.indent-guides]
 render = true
-character = "┆"
+character = "╎"
 skip-levels = 1
 
 [editor.smart-tab]
 enable = false
+
+[editor.lsp]
+auto-signature-help = false
+display-messages = true
+
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"
+"A-x" = "extend_to_line_bounds"
+"X" = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+"A-x"  ="extend_to_line_bounds"
+"X" = ["extend_line_up", "extend_to_line_bounds"]
